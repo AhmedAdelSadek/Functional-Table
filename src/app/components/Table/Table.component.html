@@ -1,0 +1,32 @@
+<!-- Responsive container for Widget -->
+<div class="widget-container">
+    <div>
+        <h2>Functional Table</h2>
+    </div>
+
+    <!-- Functional test widget -->
+
+    <div class="container">
+        <table class="center" (window:resize)="onResize($event)">
+            <tr>
+                <th></th>
+                <th>Test</th>
+                <th>Benchmark</th>
+                <th>Process</th>
+            </tr>
+            <tr *ngFor="let value of allValues; let i=index;">
+                <td>
+                    <li class="label-color2" [style.background-color]="getColor(value, allBenchmark[i])"></li>
+                </td>
+                <td class="text-truncate ms" id="tdValue">{{value !== 'n/a' ? value +' '+'ms' : value}}</td>
+                <td class="text-truncate ms" id="tdBenchmark">{{allBenchmark[i] ? allBenchmark[i] +' '+'ms' : 0 +'
+                    '+'ms'}}</td>
+                <td id="tdSentence" *ngIf="check(i)">{{interValue}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- / Functional test widget -->
+
+</div>
+<!-- / Responsive container for Widget -->

@@ -1,0 +1,86 @@
+.widget-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 450px;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin: 3%;
+}
+
+// This is used to make style modifications to the h2 html tag.
+h2 {
+  margin-top: 0px !important;
+  font-weight: bold;
+  height: auto;
+  margin-left: 10px;
+}
+
+.container {
+  overflow-x: auto;
+  max-height: 386px;
+  width: 100%;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+.label-color2 {
+  border-radius: 50%;
+  display: flex;
+  width: 10px;
+  height: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr td:last-child {
+  width: 100%;
+}
+
+.ms {
+  display: revert !important;
+}
+
+@media only screen and (min-width: 417px) and (max-width: 600px) {
+  tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 0px;
+    border: 1px solid gray;
+  }
+
+  #tdSentence {
+    white-space: nowrap;
+    min-width: 77%;
+    max-width: 100%;
+  }
+
+  table {
+    padding-left: 0px;
+  }
+
+  .container {
+    max-height: 368px;
+  }
+}
